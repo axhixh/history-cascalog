@@ -14,7 +14,7 @@
     [(day-of-week ts) (hour ts)]))
 
 (deffilterop is-interesting-url? [url]
-  (. url contains "clojure"))
+  (. (. url toLowerCase) contains "clojure"))
 
 (defn -main [& args]
   ; first query that just counts visits by hour by day of week
